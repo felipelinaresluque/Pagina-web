@@ -1,5 +1,5 @@
 .carousel-inner {
-    height: 600px; /* Podés ajustar este valor */
+    height: 900px; 
 }
 
 .carousel-inner img {
@@ -7,3 +7,158 @@
     height: 100%;
     width: 100%;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.custom-header {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f6d78f; 
+    border-bottom: 1px solid #f6d78f(56, 80%, 75%, 0.136);
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff; 
+}
+
+.logo {
+    height: 110px;
+    object-fit: contain;
+}
+
+.columna1 {
+
+    height:300px;
+    object-fit: contain;
+}
+
+.columna2 {
+
+    height:300px;
+    object-fit: contain;
+}
+
+.columna3 {
+
+    height:300px;
+    object-fit: contain;
+}
+
+.columna4 {
+
+    height:300px;
+    object-fit: contain;
+}
+
+.footer {
+    background-color: #f6d78f;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer p {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+@media (max-width: 576px) {
+    .footer p {
+        font-size: 14px;
+    }
+}
+
+
+img[class^="item"] {
+  height: 300px;
+  object-fit: contain;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+img[class^="item"]:hover {
+  transform: scale(1.05);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #fefefe;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item {
+  width: 250px;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.pulsera {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #0a7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #095;
+}
+
+.carrito {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+#listaCarrito {
+  list-style: none;
+  padding: 0;
+}
+
