@@ -12,8 +12,8 @@
 
 .custom-header {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f6d78f; 
-    border-bottom: 1px solid #f6d78f(56, 80%, 75%, 0.136);
+    background-color: #fbdb8d; 
+    border-bottom: 1px solid #fbdb8d(56, 80%, 75%, 0.136);
 }
 
 .logo-text {
@@ -34,7 +34,7 @@
 }
 
 .logo {
-    height: 110px;
+    height: 150px;
     object-fit: contain;
 }
 
@@ -62,25 +62,7 @@
     object-fit: contain;
 }
 
-.footer {
-    background-color: #f6d78f;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
 
-.footer p {
-    margin: 4px 0;
-    font-size: 16px;
-}
-
-@media (max-width: 576px) {
-    .footer p {
-        font-size: 14px;
-    }
-}
 
 
 img[class^="item"] {
@@ -112,34 +94,58 @@ h1, h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: stretch; /* Alinea verticalmente todas las cajas */
+  gap: 30px;
 }
 
 .item {
-  width: 250px;
-  box-sizing: border-box;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  height: 350px; /* Podés ajustar este valor */
 }
 
-.pulsera {
-  width: 100%;
+.item:hover {
+  transform: scale(1.02)
+
+}
+
+.item img{
+
+  width:100%;
   height: 200px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 8px;
   margin-bottom: 10px;
 }
 
-input[type="number"] {
+.pulsera,
+.anillo,
+.aros,
+.collares {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+
+.item input[type="number"] {
   width: 60px;
+  text-align: center;
+  margin-top: 10px;
   margin-bottom: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-button {
-  padding: 5px 10px;
-  background-color: #0a7;
+.item button {
+  padding: 6px 12px;
+  background-color: rgb(243, 187, 109);
   color: white;
   border: none;
   border-radius: 5px;
@@ -160,5 +166,148 @@ button:hover {
 #listaCarrito {
   list-style: none;
   padding: 0;
+  margin-top: 15px;
 }
 
+#listaCarrito li {
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.footer {
+  background-color: #f6d78f;
+  color: #333;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 6px 0;
+}
+
+@media (max-width: 576px) {
+  .galeria1 {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .item {
+    width: 90%;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+.container .col {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.image-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.image-link img {
+  width: 100%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 10px;
+}
+
+
+.image-title {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+
+.image-link:hover img {
+  transform: scale(1.05);
+  filter: brightness(60%);
+}
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus,
+.carousel-control-prev:active,
+.carousel-control-next:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+.main-body {
+  overflow-x: hidden;
+}
+
+
+.custom-header {
+  width: 100%;
+}
+
+
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+body {
+  background-color: #f4d77a;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+
+.columna1 img,
+.columna2 img,
+.columna3 img,
+.columna4 img {
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  height: 100%;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Vale Morrone</title>
+    <link rel="stylesheet" href="diseño.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="custom-header d-flex justify-content-between align-items-center px-4 py-3">
+    <nav class="d-flex gap-4">
+        <a href="#" class="nav-link">HOME</a>
+        <a href="#" class="nav-link">PRODUCTOS</a>
+    </nav>
+    <nav>
+      <a href="index.html">
+          <img src="IMAGENES/LOGO PRINCIPAL.jpg" alt="Vale Morrone" class="logo">
+        </a>
+    </nav>
+        
+      <nav class="d-flex gap-4">
+        <a href="#" class="nav-link">CONTACTO</a>
+        <a href="#" class="nav-link">NUESTRA HISTORIA</a>
+      </nav>
+        
+
+        
+    </nav>
+</header>
+
+<div style="position: fixed; top: 20px; right: 20px; z-index: 1050;">
+  <button class="btn btn-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
+    🛒
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cantidadTotal">0</span>
+  </button>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="carritoLabel">Tu carrito</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul id="listaCarrito" class="list-group mb-3"></ul>
+
+    <div class="d-flex justify-content-between mb-2">
+      <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar carrito</button>
+    </div>
+
+    <div class="text-end">
+      <button class="btn btn-success pagar" onclick="pagar()">Pagar</button>
+    </div>
+    <div class="text-end mt-3">
+  <strong id="totalAPagar">Total a pagar: $0</strong>
+</div>
+
+  </div>
+</div>
+
+
+<main>
+<section class="container py-5">
+  <div class="row justify-content-center g-4">
+    
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 1.jpg" alt="Anillo1" class="anillo">
+    <input type="number" min="1" value="1" id="cantGaia">
+    <button onclick="agregarAlCarrito('Anillo Gaia','cantGaia',33000)">Agregar al carrito</button>
+    <div><strong> Anillo Gaia</strong></div> 
+    <div>$33000</div>
+  </div>
+</div>
+
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 2.jpg" alt="Anillo2" class="anillo">
+    <input type="number" min="1" value="1" id="cantPortal">
+    <button onclick="agregarAlCarrito('Anillo Portal','cantPortal',35000)">Agregar al carrito</button>
+    <div><strong> Anillo Portal</strong></div> 
+    <div>$35000</div>
+  </div>
+</div>
+
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 3.jpg" alt="Anillo3" class="anillo">
+    <input type="number" min="1" value="1" id="cantHeaven">
+    <button onclick="agregarAlCarrito('Anillo Heaven','cantHeaven',40000)">Agregar al carrito</button>
+    <div><strong> Anillo Heaven</strong></div> 
+    <div>$40000</div>
+  </div>
+</div>
+
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 4.jpg" alt="Anillo4" class="anillo">
+    <input type="number" min="1" value="1" id="cantVision">
+    <button onclick="agregarAlCarrito('Anillo Vision','cantVision',37000)">Agregar al carrito</button>
+    <div><strong> Anillo Vision</strong></div> 
+    <div>$37000</div>
+  </div>
+</div>
+
+
+
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 5.jpg" alt="Anillo5" class="anillo">
+    <input type="number" min="1" value="1" id="cantKaki">
+    <button onclick="agregarAlCarrito('Anillo Kaki','cantKaki',36000)">Agregar al carrito</button>
+    <div><strong> Anillo Kaki</strong></div> 
+    <div>$36000</div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 6.jpg" alt="Anillo6" class="anillo">
+    <input type="number" min="1" value="1" id="cantOptimus">
+    <button onclick="agregarAlCarrito('Anillo Optimus','cantOptimus',50000)">Agregar al carrito</button>
+    <div><strong> Anillo Optimus</strong></div> 
+    <div>$50000</div>
+  </div>
+</div>
+
+
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 7.jpg" alt="Anillo7" class="anillo">
+    <input type="number" min="1" value="1" id="cantSky">
+    <button onclick="agregarAlCarrito('Anillo Sky','cantSky',52000)">Agregar al carrito</button>
+    <div><strong> Anillo Sky</strong></div> 
+    <div>$52000</div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 8.jpg" alt="Anillo8" class="anillo">
+    <input type="number" min="1" value="1" id="cantJade">
+    <button onclick="agregarAlCarrito('Anillo Jade','cantJade',45000)">Agregar al carrito</button>
+    <div><strong> Anillo Jade</strong></div> 
+    <div>$45000</div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 9.jpg" alt="Anillo9" class="anillo">
+    <input type="number" min="1" value="1" id="cantSaint">
+    <button onclick="agregarAlCarrito('Anillo Saint','cantSaint',41000)">Agregar al carrito</button>
+    <div><strong> Anillo Saint</strong></div> 
+    <div>$41000</div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 10.jpg" alt="Anillo10" class="anillo">
+    <input type="number" min="1" value="1" id="cantRose">
+    <button onclick="agregarAlCarrito('Anillo Rose','cantRose',46000)">Agregar al carrito</button>
+    <div><strong> Anillo Rose</strong></div> 
+    <div>$46000</div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="item">
+    <img src="IMAGENES/anillo 11.jpg" alt="Anillo11" class="anillo">
+    <input type="number" min="1" value="1" id="cantThanos">
+    <button onclick="agregarAlCarrito('Anillo Thanos','cantThanos',45000)">Agregar al carrito</button>
+    <div><strong> Anillo Thanos</strong></div> 
+    <div>$45000</div>
+  </div>
+</div>
+
+</section>
+
+
+
+</main>
+
+<section>
+  <footer class="footer mt-5">
+  <div class="container text-center py-4">
+    <div class="row">
+      <div class="col-12">
+        <p class="mb-1">Instagram: @vale.morronesjoyas</p>
+        <p class="mb-1">Contacto: +54 6490-8620</p>
+        <p class="mb-1">Dirección: Antezana 247</p>
+        <p class="mb-3">Mail: morronejoyas@gmail.com</p>
+        <p class="mb-0">&copy; 2025 Vale Morrone - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</section>
+
+<script src="elscript.js"></script>
+</body>
+</html>
