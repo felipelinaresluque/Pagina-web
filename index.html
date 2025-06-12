@@ -6,37 +6,59 @@
     <title>Vale Morrone</title>
     <link rel="stylesheet" href="diseño.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body class="main-body">
 
 
-<header class="custom-header py-2">
+<header class="custom-header py-2 border-bottom">
   <div class="container">
-    <div class="row align-items-center">
-      
-      <div class="col-4 d-flex justify-content-start">
-        <nav class="d-flex gap-3">
-          <a href="index.html" class="nav-link">HOME</a>
-          <a href="productos.html" class="nav-link">PRODUCTOS</a>
-        </nav>
-      </div>
-
     
-      <div class="col-4 d-flex justify-content-center">
-        <a href="index.html">
-          <img src="IMAGENES/LOGO PRINCIPAL.jpg" alt="Vale Morrone" class="logo">
-        </a>
-      </div>
+    <nav class="navbar navbar-expand-md p-0">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
 
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="mx-auto d-md-none" href="index.html">
+          <img src="IMAGENES/LOGO PRINCIPAL.jpg" alt="Vale Morrone" class="logo img-fluid" style="max-height: 50px;">
+        </a>
+
+
+        <div class="collapse navbar-collapse w-100" id="mainMenu">
+          <div class="row w-100 align-items-center">
       
-      <div class="col-4 d-flex justify-content-end">
-        <a href="#contacto" class="nav-link">CONTACTO</a>
+            <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
+              <nav class="d-flex flex-column flex-md-row gap-2">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="productos.html" class="nav-link">PRODUCTOS</a>
+              </nav>
+            </div>
+
+
+            <div class="col-md-4 d-none d-md-flex justify-content-center">
+              <a href="index.html">
+                <img src="IMAGENES/LOGO PRINCIPAL.jpg" alt="Vale Morrone" class="logo img-fluid" style="max-height: 60px;">
+              </a>
+            </div>
+
+     
+            <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end mt-2 mt-md-0">
+              <a href="#contacto" class="nav-link">CONTACTO</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </nav>
   </div>
 </header>
+
+
+
 
 
    
@@ -126,6 +148,7 @@
 
 </section>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </html>
